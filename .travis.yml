@@ -18,7 +18,6 @@ before_install:
   - docker build -t ztaylor510/react-test -f ./client/Dockerfile.dev ./client
 script:
   - docker run -e CI=true ztaylor510/react-test yarn test
-
 deploy:
   provider: script
   script: bash ./deploy.sh
